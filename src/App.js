@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import ChildComponent from './components/ChildComponent';
 import './App.css';
 
 function App() {
+  const [bgColor, setBgColor] = useState("");
+
+  //callback function to get data from child.
+  const getBgColor = (bgclr) => {
+    setBgColor(bgclr);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Passing data from child to parent</h1>
+      <div
+        className="Box_Wrapper"
+        style={{
+          border: `1px solid ${bgColor}`,
+          backgroundColor: `${bgColor}`
+        }}
+      />
+       <ChildComponent getBgColor={getBgColor} bgColor={bgColor}/>
     </div>
   );
 }
