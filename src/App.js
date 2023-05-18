@@ -9,6 +9,7 @@ function App() {
   const getBgColor = (bgclr) => {
     setBgColor(bgclr);
   };
+  
   return (
     <div className="App">
       <h1>Passing data from child to parent</h1>

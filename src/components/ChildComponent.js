@@ -1,6 +1,7 @@
 import React from "react";
 
 const ChildComponent = ({ getBgColor, bgColor }) => {
+    
   // this function used to pass data to parent component.
   const getData = (e) => {
     const { value } = e.target;
@@ -13,7 +14,13 @@ const ChildComponent = ({ getBgColor, bgColor }) => {
         marginTop: "20px",
       }}
     >
-      <input type="text" value={bgColor} onChange={getData} />
+      <input
+        type="text"
+        placeholder="Enter the color name"
+        value={bgColor}
+        onChange={getData}
+      />
+      
     </div>
   );
 };

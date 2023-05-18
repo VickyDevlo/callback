@@ -2,10 +2,24 @@
   font-family: sans-serif;
   text-align: center;
 }
+
 .Box_Wrapper {
-  width: 185px;
-  height: 220px;
+  width: 296px;
+  height: 282px;
   align-items: center;
   margin: 30px auto;
   border-radius: 8px;
+}
+
+input {
+  width: 200px;
+  height: 20px;
+  padding: 7px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+input:focus {
+  outline: none;
 }
